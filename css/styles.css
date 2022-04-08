@@ -17,8 +17,10 @@
      /*Темна тема фону*/
      --primary-dark-bd: #2F303A; 
      --color-letra: #AFB1B8; 
-
 } 
+/* Різні ефекти */
+      --anim-fast: 250ms ease-in;
+      --anim-slov: 500ms ease-in-out;
 
 body{
      font-family: var(--main-font);
@@ -117,6 +119,7 @@ ul{
      color: var(--accent-txt);
 }
 .nav-link{
+      position: relative;
       font-weight: 500;
       font-size: 14px;
       line-height: 1.14;
@@ -126,6 +129,19 @@ ul{
 .nav-link:hover,
 .nav-link:focus{
      color: var(--accent-txt);
+}
+.current:hover:after{
+      color: var(--accent-txt);
+      position: absolute;
+      bottom: -28px;
+      /* left: 0; */
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      transition: widt 250ms;
+      background: var(--accent-txt);
+      border-radius: 2px;
 }
 .contakts{
       display: flex;
@@ -284,6 +300,21 @@ ul{
 }
 .work-item:not(:first-child){
       margin-left: 30px;
+}
+.work-item{
+      position: relative;
+}
+.work-image-deskription{
+      position: absolute;
+      width: 270px;
+      height: 16px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      /* text-transform: uppercase; */
+      color: white;
+      bottom: 10;
 }
 
 /* about-us */
