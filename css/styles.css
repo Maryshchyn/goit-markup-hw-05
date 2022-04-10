@@ -72,13 +72,14 @@ ul{
 }
 .modal-button{
       position: absolute;
-      width: 30px;
-      height: 30px;
+      width: 11px;
+      height: 11px;
       top: 8px;
       right: 8px;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+      background-image: url(../images/icons.svg/icon.backdrop/symbol-defs.svg#close-black-18dp-2-1);
       
 }
 .list{
@@ -321,6 +322,9 @@ ul{
       letter-spacing: 0.03em;
       color: var(--secondary-light-txt);
 }
+.work-section{
+      padding-bottom: 94px;
+}
 .work-title{
       margin-right: auto;
       margin-left: auto;
@@ -557,6 +561,9 @@ ul{
       position: relative;
       padding-top: 60px ;
       padding-bottom: 60px ;
+      max-width: 1600px;
+      margin-right: auto;
+      margin-left: auto;
       background-color: var(--primary-dark-bd);
 }
 .footer-logo{
@@ -697,42 +704,7 @@ ul{
 .projekts-item:nth-last-child(-n+3){
       margin-bottom: 0;
 }
-.slider-item{
-      position: relative;
-}
-.slider-item::before{
-      position: absolute;
-      content: "";
-      display: inline-block;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      
-      opacity: 0;
-}
-.slider-item:hover::before{
-      background-color: #2196F3;
-      opacity: 1;
-}
-.slider-list{
-      position: absolute;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 1.14;
-      letter-spacing: 0.03em;
-      width: 322px;
-      height: 168px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: var(--primary-dark-txt);
-      opacity: 0;
-}
-.slider:hover .slider-list{
-      opacity: 1;
-      
-}
+
 .slider{
       display: block;
       text-decoration: none;
@@ -742,6 +714,35 @@ ul{
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
       0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.slider-thumb{
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+}
+.slider-dtscr{
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 63px 24px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(100%);
+      background-color: var(--accent-txt);
+      transition-duration: 250ms;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.55;
+      letter-spacing: 0.03em;
+      color: var(--primary-dark-txt);
+}
+
+
+.projekts-item:hover .slider-dtscr{
+      transform: translateY(0);
 }
 .projekts-image{
       display: block;
