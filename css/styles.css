@@ -62,6 +62,18 @@ ul{
       width: 528px;
       height: 581px;
       background-color: white;
+      border-radius: 4px;
+}
+.modal-button{
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 8px;
+      right: 8px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      
 }
 .list{
       padding-left: 0;
