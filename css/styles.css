@@ -176,7 +176,6 @@ ul{
       color: var(--accent-txt);
       position: absolute;
       bottom: -28px;
-      /* left: 0; */
       content: "";
       display: block;
       width: 100%;
@@ -198,7 +197,24 @@ ul{
       background: var(--accent-txt);
       border-radius: 2px;
 }
+.current-link:hover:after{
+      
+      color: var(--accent-txt);
+      position: absolute;
+      bottom: -28px;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      transition: widt 250ms;
+      background: var(--accent-txt);
+      border-radius: 2px;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      
+
+}
 .contakts{
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -220,12 +236,13 @@ ul{
       margin-right: 10px;
       justify-content: center;
       align-items: center;
-      /* fill: #757575; */
 }
 .portfolio-header-icons{
+      fill: currentColor;
+      display: flex;
       margin-right: 10px;
+      justify-content: center;
       align-items: center;
-      fill: #757575;
 }
 .contact-phone{
       display: flex;
@@ -642,6 +659,7 @@ ul{
 /* Портфоліо*/
 
 .contact-mail-portfolio{
+      position: relative;
       display: flex;
       font-weight: 500;
       justify-content: center;
@@ -650,8 +668,29 @@ ul{
       line-height: 1.14;
       letter-spacing: 0.02em;
       color: var(--secondary-light-txt);
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.contact-mail-portfolio:hover,
+.contact-mail-portfolio:focus{
+      color: var(--accent-txt);
+      fill: var(--accent-txt);
+}
+
+
+.current-link-portfolio:hover::after{
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 4px;
+      bottom: -28px;
+      border-radius: 2px;
+      background-color: var(--accent-txt);
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-phone-portfolio{
+      position: relative;
       display: flex;
        align-items: center;
        font-style: 400;
@@ -660,10 +699,15 @@ ul{
        line-height: 1.14;
        letter-spacing: 0.02em;
        color: var(--secondary-light-txt);
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-header-icons{
-      align-items: center;
+.contact-phone-portfolio:hover,
+.contact-phone-portfolio:focus{
+      color: var(--accent-txt);
+      fill: var(--accent-txt);
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .buttons-btn{
       border: transparent;
        padding: 6px 22px;
@@ -763,6 +807,7 @@ ul{
       letter-spacing: 0.03em;
       color: var(--primary-dark-txt);
       transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      
 }
 
 
